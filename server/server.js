@@ -241,7 +241,7 @@ app.use((err, req, res, next) => {
     res.status(500).json({message: 'error occured'});
 })
 
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
     console.log("The server is running on http://localhost:" + PORT);
     await sequelize.sync({force: true});
 })
