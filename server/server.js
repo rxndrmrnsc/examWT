@@ -243,5 +243,5 @@ app.use((err, req, res, next) => {
 
 app.listen(PORT, () => {
     console.log("The server is running on http://localhost:" + PORT);
-    await sequelize.sync({alter: false});
+    await sequelize.sync({force: true});
 })
